@@ -14,7 +14,8 @@ defmodule OfferConsumer.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: OfferConsumer.PubSub},
       # Start the Endpoint (http/https)
-      OfferConsumerWeb.Endpoint
+      OfferConsumerWeb.Endpoint,
+      {OfferBroadway, :kafka}
       # Start a worker by calling: OfferConsumer.Worker.start_link(arg)
       # {OfferConsumer.Worker, arg}
     ]
